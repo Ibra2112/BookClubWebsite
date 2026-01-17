@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Georgia', 'Times New Roman', serif;
     background: linear-gradient(135deg, #2c1810 0%, #3d2817 50%, #2c1810 100%);
@@ -20,6 +24,9 @@ body {
     line-height: 1.6;
     min-height: 100vh;
     padding: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 .container {
@@ -182,20 +189,20 @@ h3 {
 }
 
 .newest-member-section {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .newest-member-card {
     background: rgba(44, 24, 16, 0.8);
-    border: 3px solid #d4a574;
-    border-radius: 8px;
-    padding: 30px;
-    max-width: 600px;
-    margin: 30px auto;
+    border: 2px solid #d4a574;
+    border-radius: 6px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
     transition: all 0.3s ease;
     box-shadow: 
-        0 6px 20px rgba(0, 0, 0, 0.6),
-        0 0 30px rgba(212, 165, 116, 0.3);
+        0 4px 15px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(212, 165, 116, 0.2);
     position: relative;
     overflow: hidden;
 }
@@ -207,15 +214,15 @@ h3 {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(212, 165, 116, 0.15), transparent);
+    background: linear-gradient(90deg, transparent, rgba(212, 165, 116, 0.1), transparent);
     transition: left 0.5s ease;
 }
 
 .newest-member-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.7),
-        0 0 40px rgba(212, 165, 116, 0.4);
+        0 6px 20px rgba(0, 0, 0, 0.6),
+        0 0 25px rgba(212, 165, 116, 0.3);
 }
 
 .newest-member-card:hover::before {
@@ -224,39 +231,39 @@ h3 {
 
 .newest-member-card h3 {
     text-align: center;
-    margin-bottom: 25px;
-    font-size: 2em;
+    margin-bottom: 15px;
+    font-size: 1.5em;
     color: #d4a574;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .member-content {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
 }
 
 .member-background,
 .member-fun-fact {
     background: rgba(44, 24, 16, 0.5);
-    padding: 20px;
-    border-radius: 5px;
-    border-left: 3px solid #8b6f47;
+    padding: 12px 15px;
+    border-radius: 4px;
+    border-left: 2px solid #8b6f47;
 }
 
 .member-background h4,
 .member-fun-fact h4 {
-    font-size: 1.3em;
+    font-size: 1.1em;
     color: #d4a574;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .member-background p,
 .member-fun-fact p {
     color: #e8dcc6;
-    font-size: 1.1em;
-    line-height: 1.6;
+    font-size: 0.95em;
+    line-height: 1.5;
     margin: 0;
 }
 

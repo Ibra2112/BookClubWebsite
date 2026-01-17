@@ -43,23 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add subtle parallax effect on scroll
-    let lastScrollTop = 0;
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const container = document.querySelector('.container');
-        
-        if (scrollTop > lastScrollTop) {
-            // Scrolling down
-            container.style.transform = `translateY(${scrollTop * 0.02}px)`;
-        } else {
-            // Scrolling up
-            container.style.transform = `translateY(${scrollTop * 0.02}px)`;
-        }
-        
-        lastScrollTop = scrollTop;
-    });
-    
     // Add click ripple effect to founder cards
     const founderCards = document.querySelectorAll('.founder-card');
     founderCards.forEach(card => {
@@ -105,4 +88,6 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+
 
